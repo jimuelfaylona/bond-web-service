@@ -7,7 +7,7 @@
             font-family: georgia;
         }
     </style>
-    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
     <script type="text/javascript">
 
@@ -26,7 +26,6 @@
             return url;
         }
 
-
         $(document).ready(function () {
 
             $('.category').click(function (e) {
@@ -35,7 +34,6 @@
                 loadAJAX(cat);  //load AJAX and parse JSON file
             });
         });
-
 
         function loadAJAX(cat) {
             /* url can be run on a server running PHP or
