@@ -65,7 +65,7 @@
             //JSON processing data goes here
             //toCondole(data);
             //$("#output").text(JSON.stringify(data));
-            $.each(data.films, function (i, item) { }); {
+            $.each(data.films, function (i, item) {
                 let text = `
                 <b>Title</b>: ${item.Title}<br />
                 <b>Film #</b>: ${item.Film}<br />
@@ -76,7 +76,7 @@
                 <div class="pic"><img src="thumbnails/a-view-to-a-kill.jpg" /></div>
                 `;
                 $("<div></div>").html(text).appendTo("#films");
-            }
+            });
         }
 
     </script>
