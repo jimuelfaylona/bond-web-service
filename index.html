@@ -19,7 +19,7 @@
                 url = "api.php?cat=" + cat;
             } else {//server is HTML only - simulate web service
                 if (cat == "box") {//box office
-                    url = "data/bond-box-office.js";
+                    url = "data/restaurant-showcase.js";
                 } else {//year
                     url = "data/bond-year.js";
                 }
@@ -67,22 +67,21 @@
             //$("#output").text(JSON.stringify(data));
 
             //clear films from previous click
-            $("#films").html("");
+            $("#name").html("");
 
             //add title to the h3 element
-            $("#filmtitle").html(data.title);
+            $("#restaurantName").html(data.title);
 
             $.each(data.films, function (i, item) {
                 let text = `
-                <b>Title</b>: ${item.Title}<br />
-                <b>Film #</b>: ${item.Film}<br />
-                <b>Year</b>: ${item.Year}<br />
-                <b>Bond</b>: ${item.Bond}<br />
-                <b>Box Office</b>: ${item.BoxOffice}<br />
-                <b>Writers</b>: ${item.Writers}<br />
+                <b>Restaurant Name</b>: ${item.Name}<br />
+                <b>Location</b>: ${item.Location}<br />
+                <b>Cuisine</b>: ${item.Cuisine}<br />
+                <b>Rating</b>: ${item.Rating}<br />
+                <b>Delivery</b>: ${item.Delivery}<br />
                 <div class="pic"><img src="thumbnails/${item.Image}" /></div>
                 `;
-                $("<div></div>").html(text).appendTo("#films");
+                $("<div></div>").html(text).appendTo("#name");
             });
         }
 
@@ -91,10 +90,10 @@
 
 <body>
     <h1>Bond Web Service</h1>
-    <a href="year" class="category">Bond Films By Year</a><br />
+    <a href="name" class="category">Local Restaurant Showcase</a><br />
     <a href="box" class="category">Bond Films By International Box Office Totals</a>
-    <h3 id="filmtitle">Title Will Go Here</h3>
-    <div id="films">
+    <h3 id="restaurantName">Title Will Go Here</h3>
+    <div id="name">
         <!--<div>
             <b>Title</b>: Title<br />
             <b>Film #</b>: Title<br />

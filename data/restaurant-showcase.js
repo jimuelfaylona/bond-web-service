@@ -1,5 +1,5 @@
 {
-    "title": "Local Restaurants"
+    "title": "Local Restaurants",
     "name": [
         {
             "Name": "Emory's",
