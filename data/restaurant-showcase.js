@@ -1,6 +1,6 @@
 {
     "title": "Local Restaurants",
-    "name": [
+    "name":[
         {
             "Name": "Emory's",
             "Location": "Everett, WA",
