@@ -1,34 +1,43 @@
-body {font-family:georgia;}
-#name {
-	max-width:600px;
-	margin:5px;
-	padding:2px;
-}
-#name > div {
-	padding:5px;
-	min-height:40px;
-	margin-bottom:5px;
-	border:1px solid #E77D2C;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	position:relative; /* required to place #pic to right */
-}
-
-#name h3 {
-	font-family:georgia;
-	padding:5px;
-	color:#fff;
-	background:#E77D2C;
-	margin:0;
-}
-
-.pic{
-	position:absolute;
-	right:10px;
-	top:10px;
-}
-img{
-	max-width:100px;
-	max-height:80px;
-}
+body {font-family:georgia;
+	background-color:navy;
+	color:aliceblue;}
+	#name {
+		max-width:600px;
+		margin-right:auto;
+		margin-left:auto;
+		padding:2px;
+	}
+	#name > div {
+		padding:5px;
+		min-height:40px;
+		margin-bottom:5px;
+		border:2px solid orange;
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		position:relative; /* required to place #pic to right */
+	}
+	
+	#name h3 {
+		font-family:georgia;
+		padding:5px;
+		color:#fff;
+		background:#E77D2C;
+		margin:0;
+	}
+	
+	.pic{
+		position:absolute;
+		right:10px;
+		top:10px;
+	}
+	img{
+		max-width:100px;
+		max-height:80px;
+	}
+	html{
+		text-align:center;
+	}
+	a{
+		color:orange;
+	}
