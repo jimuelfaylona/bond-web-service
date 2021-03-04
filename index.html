@@ -19,9 +19,9 @@
                 url = "api.php?cat=" + cat;
             } else {//server is HTML only - simulate web service
                 if (cat == "name") {//box office
-                    url = "data/restaurant-showcase.js";
+                    url = "data/restaurant-name.js";
                 } else {//year
-                    url = "data/restaurant-showcase.js";
+                    url = "data/restaurant-cuisine.js";
                 }
             }
             return url;
@@ -52,7 +52,7 @@
                 type: "GET",
                 dataType: "json",
                 url: url,
-                success: nameJSON
+                success: bondJSON
             });
         }
 
@@ -70,17 +70,17 @@
             $("#name").html("");
 
             //add title to the h3 element
-            $("#restaurantName").html(data.title);
+            $("#restaurant-title").html(data.title);
 
             $.each(data.name, function (i, item) {
                 let text = `
-                <b>Restaurant Name</b>: ${item.Name}<br />
-                <b>Location</b>: ${item.Location}<br />
-                <b>Cuisine</b>: ${item.Cuisine}<br />
-                <b>Rating</b>: ${item.Rating}<br />
-                <b>Delivery</b>: ${item.Delivery}<br />
-                <div class="pic"><img src="thumbnails/${item.Image}" /></div>
-                `;
+                    <b>Name</b>: ${item.Name}<br />
+                    <b>Location</b>: ${item.Location}<br />
+                    <b>Cuisine</b>: ${item.Cuisine}<br />
+                    <b>Rating</b>: ${item.Rating}<br />
+                    <b>Delivery</b>: ${item.Delivery}<br />
+                    <div class="pic"><img src="images/${item.Image}" /></div>
+                    `;
                 $("<div></div>").html(text).appendTo("#name");
             });
         }
@@ -90,19 +90,19 @@
 
 <body>
     <h1>Bond Web Service</h1>
-    <a href="name" class="category">Local Restaurant Showcase</a><br />
-    <a href="box" class="category">Bond Films By International Box Office Totals</a>
-    <h3 id="restaurantName">Title Will Go Here</h3>
+    <a href="name" class="category">Restaurant Showcase Sorted by Name</a><br />
+    <a href="cuisine" class="category">Restaurant Showcase Sorted by Cuisine</a>
+    <h3 id="restaurant-title">Title Will Go Here</h3>
     <div id="name">
         <!--<div>
-            <b>Title</b>: Title<br />
-            <b>Film #</b>: Title<br />
-            <b>Year</b>: Title<br />
-            <b>Bond</b>: Title<br />
-            <b>Box Office</b>: Title<br />
-            <b>Writers</b>: Title<br />
-            <div class="pic"><img src="thumbnails/a-view-to-a-kill.jpg" /></div>
-        </div>-->
+                <b>Title</b>: Title<br />
+                <b>Film #</b>: Title<br />
+                <b>Year</b>: Title<br />
+                <b>Bond</b>: Title<br />
+                <b>Box Office</b>: Title<br />
+                <b>Writers</b>: Title<br />
+                <div class="pic"><img src="thumbnails/a-view-to-a-kill.jpg" /></div>
+            </div>-->
     </div>
     <div id="output">Results go here</div>
 </body>
